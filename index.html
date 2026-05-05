@@ -6,184 +6,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    :root {
-      --white: #ffffff;
-      --black: #000000;
-      --muted: #666666;
-      --border: #e5e7eb;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.6;
-    }
-
-    img {
-      width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ---------- GLOBAL ---------- */
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 5rem 1.5rem;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      color: var(--muted);
+      color: #000;
+      background: #fff;
+      line-height: 1.5;
     }
 
     /* ---------- HEADER ---------- */
     header {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      max-width: 1200px;
-      margin: auto;
-      padding: 1.5rem;
+      border-bottom: 1px solid #ddd;
+      padding: 14px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    header strong {
+      font-size: 16px;
+    }
+
     nav a {
-      margin-left: 1.5rem;
-      font-size: 0.95rem;
+      margin-left: 16px;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
     }
 
     /* ---------- IMAGE STRIPS ---------- */
     .image-strip {
-      height: 220px;
+      width: 100%;
+      height: 110px;
       overflow: hidden;
     }
 
     .image-strip img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: grayscale(85%) contrast(1.05);
+      filter: grayscale(85%);
+      display: block;
     }
 
     .image-strip.services {
-      height: 180px;
-      margin-bottom: 3rem;
+      height: 150px;
+      margin-bottom: 32px;
     }
 
-    /* ---------- ABOUT ---------- */
-    .about {
-      display: flex;
-      justify-content: center;
+    /* ---------- SECTIONS ---------- */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 24px;
       text-align: center;
     }
 
-    .about-inner {
-      max-width: 700px;
+    h2 {
+      margin-bottom: 20px;
     }
 
-    .about-inner img.profile {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
+    /* ---------- ABOUT ---------- */
+    .about img {
+      width: 180px;
+      height: 180px;
       object-fit: cover;
-      margin: 0 auto 2rem;
-    }
-
-    .about-inner h3 {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-
-    .about-inner p {
-      margin-bottom: 1.5rem;
-      line-height: 1.75;
+      border-radius: 50%;
+      margin-bottom: 24px;
     }
 
     /* ---------- SERVICES ---------- */
     .services {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
+      background: #000;
+      color: #fff;
     }
 
-    .services h3 {
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
+    .service-block {
+      max-width: 720px;
+      margin: 0 auto 36px;
     }
 
-    .services p {
+    .service-block h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .service-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-block li {
+      font-size: 14px;
       color: #dddddd;
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-    }
-
-    /* ---------- PROCESS ---------- */
-    .process {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .process-inner {
-      max-width: 700px;
-    }
-
-    .step {
-      margin-bottom: 1.8rem;
-    }
-
-    .step strong {
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    .process-note {
-      margin-top: 2.5rem;
-      font-weight: bold;
-    }
-
-    /* ---------- CONTACT ---------- */
-    .contact {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
-    }
-
-    .contact-email {
-      font-size: 1.1rem;
-      font-weight: bold;
+      margin-bottom: 6px;
     }
 
     /* ---------- FOOTER ---------- */
     footer {
+      border-top: 1px solid #ddd;
+      padding: 28px;
       text-align: center;
-      padding: 2rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .image-strip {
-        height: 150px;
-      }
+      font-size: 14px;
     }
   </style>
 </head>
@@ -191,83 +116,103 @@
 <body>
 
 <header>
-  <div class="header-inner">
-    <strong>BIMstruct | structures.done right.</strong>
-    <nav>
-      Home About Services How it works Contact
-    </nav>
-  </div>
+  <strong>BIMstruct | structures.done right.</strong>
+  <nav>
+    Home
+    About
+    Services
+    Contact
+  </nav>
 </header>
 
-<!-- ✅ TOP IMAGE (NOW VISIBLE) -->
+<!-- HERO IMAGE -->
 <div class="image-strip">
-  <img src="hero-construction.jpg" alt="Concrete structure under construction">
+  <img src="hero-construction.jpg" alt="Structural construction">
 </div>
 
 <!-- ABOUT -->
 <section class="container about">
-  <div class="about-inner">
-    <img
-      src="about.jpg"
-      alt="Structural construction detail"
-      class="profile"
-    >
+  <img src="about.jpg" alt="Structural blueprint">
 
-    <h2>About</h2>
-    <h3>Structural BIM Solutions — Local Expertise, Global Experience</h3>
-
-    <p>
-      BIMstruct is a remote-based structural BIM services company delivering
-      high-quality, practical, and affordable BIM solutions — from Cape Town to the world.
-    </p>
-
-    <p>
-      We support engineers, contractors, developers, architects, and students with
-      reliable, construction-focused BIM services.
-    </p>
-  </div>
+  <h2>About</h2>
+  <p>
+    BIMstruct is a remote-based structural BIM services company delivering
+    high-quality, practical, and affordable solutions — from Cape Town to the world.
+  </p>
 </section>
 
 <!-- SERVICES -->
 <section class="container services">
   <h2>Professional BIM Services</h2>
 
-  <!-- ✅ SERVICES IMAGE (NOW VISIBLE) -->
   <div class="image-strip services">
-    <img src="services-construction.jpg" alt="Reinforcement and formwork detail">
+    <img src="services-construction.jpg" alt="Construction site">
   </div>
 
-  <h3>Structural Modelling & BIM Management</h3>
-  <p>Structural Revit modelling (reinforced concrete & steel)</p>
-  <p>Construction-ready models</p>
+  <div class="service-block">
+    <h3>Structural Modelling & BIM Management</h3>
+    <ul>
+      <li>Structural Revit modelling (reinforced concrete & steel)</li>
+      <li>Structural layouts and construction-ready models</li>
+      <li>Model audits, clean-ups, and optimisation</li>
+      <li>Model management and BIM execution support</li>
+    </ul>
+  </div>
 
-  <h3>Reinforcement Detailing</h3>
-  <p>Rebar modelling, detailing & schedules</p>
+  <div class="service-block">
+    <h3>Reinforcement Detailing</h3>
+    <ul>
+      <li>Rebar modelling, detailing, and scheduling</li>
+      <li>Clear, constructible reinforcement layouts</li>
+      <li>Site-friendly detailing aligned with industry standards</li>
+      <li>Coordination-ready reinforcement models</li>
+    </ul>
+  </div>
 
-  <h3>BIM Coordination & Clash Detection</h3>
-  <p>Multidisciplinary coordination & clash reporting</p>
-</section>
+  <div class="service-block">
+    <h3>BIM Coordination & Clash Detection</h3>
+    <ul>
+      <li>Multidisciplinary model coordination</li>
+      <li>Clash detection and resolution reports</li>
+      <li>Coordination support for consultants and contractors</li>
+      <li>Ongoing model updates and issue tracking</li>
+    </ul>
+  </div>
 
-<!-- PROCESS -->
-<section class="container process">
-  <div class="process-inner">
-    <h2>How BIMstruct Works</h2>
+  <div class="service-block">
+    <h3>3D Visualisation & Renders</h3>
+    <ul>
+      <li>High-quality 3D structural renders</li>
+      <li>Construction sequencing and phasing visuals</li>
+      <li>Presentation-ready models for review and approvals</li>
+    </ul>
+  </div>
 
-    <div class="step"><strong>1.</strong> Upload your request</div>
-    <div class="step"><strong>2.</strong> Scope review</div>
-    <div class="step"><strong>3.</strong> Clear feedback & quote</div>
-    <div class="step"><strong>4.</strong> Delivery</div>
+  <div class="service-block">
+    <h3>Automation & Dynamo</h3>
+    <ul>
+      <li>Custom Dynamo script creation</li>
+      <li>Revit workflow automation</li>
+      <li>Productivity tools for BIM teams</li>
+      <li>Tailored automation for repetitive modelling tasks</li>
+    </ul>
+  </div>
 
-    <div class="process-note">
-      No obligation — just honest, professional BIM support.
-    </div>
+  <div class="service-block">
+    <h3>Conversions & Digitalisation</h3>
+    <ul>
+      <li>PDF to Revit conversion</li>
+      <li>2D CAD to Revit conversion</li>
+      <li>As-built and record model creation</li>
+      <li>Legacy drawing upgrades to intelligent BIM models</li>
+    </ul>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="container contact">
+<section class="container">
   <h2>Get in Touch</h2>
-  <p>Email: <span class="contact-email">BIMstruct@gmail.com</span></p>
+  <p>BIMstruct@gmail.com</p>
 </section>
 
 <footer>
@@ -276,3 +221,4 @@
 
 </body>
 </html>
+``
