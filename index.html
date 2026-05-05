@@ -33,7 +33,6 @@
 
     header strong {
       font-size: 16px;
-      white-space: nowrap;
     }
 
     nav {
@@ -47,7 +46,6 @@
       text-decoration: none;
       padding-bottom: 2px;
       border-bottom: 1px solid transparent;
-      transition: color 0.2s ease, border-color 0.2s ease;
     }
 
     nav a:hover,
@@ -56,10 +54,10 @@
       border-bottom-color: #fff;
     }
 
-    /* ---------- HERO IMAGE ---------- */
+    /* ---------- HERO ---------- */
     .image-strip {
       width: 100%;
-      height: 186px; /* +20 mm depth */
+      height: 186px;
       overflow: hidden;
     }
 
@@ -73,7 +71,6 @@
 
     /* ---------- DIVIDER ---------- */
     .divider {
-      width: 100%;
       height: 1px;
       background: #fff;
       opacity: 0.25;
@@ -81,7 +78,7 @@
 
     /* ---------- SECTIONS ---------- */
     section {
-      scroll-margin-top: 78px; /* sticky header offset */
+      scroll-margin-top: 78px;
     }
 
     .container {
@@ -92,7 +89,7 @@
 
     h2 {
       text-align: center;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
       font-size: 26px;
     }
 
@@ -127,8 +124,8 @@
 
     .service-block ul {
       list-style: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
 
     .service-block li {
@@ -137,15 +134,25 @@
       margin-bottom: 6px;
     }
 
-    /* ---------- PROCESS ---------- */
+    /* ---------- HOW IT WORKS (SHIFTED LEFT) ---------- */
     .process {
-      max-width: 700px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 36px 24px;
     }
 
+    .process h2 {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .process-grid {
+      max-width: 520px;
+      margin-left: 180px; /* <<< THIS MOVES TEXT TO YOUR RED LINE */
+    }
+
     .step {
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .step strong {
@@ -182,7 +189,6 @@
   </nav>
 </header>
 
-<!-- HOME -->
 <section id="home">
   <div class="image-strip">
     <img src="hero-construction.jpg" alt="">
@@ -191,92 +197,64 @@
 
 <div class="divider"></div>
 
-<!-- ABOUT -->
 <section id="about" class="container about">
   <img src="about.jpg" alt="">
   <h2>About</h2>
   <p>
     BIMstruct is a remote-based structural BIM services company delivering
-    high-quality, practical, and affordable solutions — from Cape Town to the world.
+    high‑quality, practical, and affordable solutions — from Cape Town to the world.
   </p>
 </section>
 
 <div class="divider"></div>
 
-<!-- SERVICES -->
 <section id="services" class="container services">
   <h2>Professional BIM Services</h2>
 
   <div class="service-block">
     <h3>Structural Modelling & BIM Management</h3>
     <ul>
-      <li>Structural Revit modelling (reinforced concrete & steel)</li>
-      <li>Construction-ready structural models</li>
-      <li>Model audits, clean-ups & optimisation</li>
-      <li>BIM execution and model management support</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>Reinforcement Detailing</h3>
-    <ul>
-      <li>Rebar modelling, detailing & scheduling</li>
-      <li>Clear, constructible reinforcement layouts</li>
-      <li>Coordination-ready reinforcement models</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>BIM Coordination & Clash Detection</h3>
-    <ul>
-      <li>Multidisciplinary coordination</li>
-      <li>Clash detection & issue tracking</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>3D Visualisation & Renders</h3>
-    <ul>
-      <li>High-quality structural renders</li>
-      <li>Sequencing and phasing visuals</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>Automation & Dynamo</h3>
-    <ul>
-      <li>Custom Dynamo scripts</li>
-      <li>Revit workflow automation</li>
-      <li>Productivity tools for BIM teams</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>Conversions & Digitalisation</h3>
-    <ul>
-      <li>PDF & CAD to Revit conversion</li>
-      <li>As-built and record models</li>
+      <li>Structural Revit modelling (RC & steel)</li>
+      <li>Construction-ready models</li>
+      <li>Model audits and optimisation</li>
     </ul>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- HOW IT WORKS -->
 <section id="process" class="process">
   <h2>How BIMstruct Works</h2>
 
-  <div class="step"><strong>1. Upload your request</strong>Drawings, PDFs, CAD, Revit models or brief description.</div>
-  <div class="step"><strong>2. Scope review</strong>Feasibility, technical requirements & effort.</div>
-  <div class="step"><strong>3. Clear feedback & quote</strong>Transparent confirmation & pricing.</div>
-  <div class="step"><strong>4. Delivery</strong>Quality structural BIM work.</div>
+  <div class="process-grid">
+    <div class="step">
+      <strong>1. Upload your request</strong>
+      Drawings, PDFs, CAD, Revit models or brief description.
+    </div>
 
-  <div class="note">No obligation – just honest, professional BIM support.</div>
+    <div class="step">
+      <strong>2. Scope review</strong>
+      Feasibility, technical requirements & effort.
+    </div>
+
+    <div class="step">
+      <strong>3. Clear feedback & quote</strong>
+      Transparent confirmation & pricing.
+    </div>
+
+    <div class="step">
+      <strong>4. Delivery</strong>
+      Quality structural BIM work.
+    </div>
+
+    <div class="note">
+      No obligation – just honest, professional BIM support.
+    </div>
+  </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CONTACT -->
 <section id="contact" class="container" style="text-align:center;">
   <h2>Get in Touch</h2>
   <p>BIMstruct@gmail.com</p>
@@ -286,29 +264,6 @@
   BIMstruct © 2026 · structures.done right.
 </footer>
 
-<!-- ---------- ACTIVE NAV LOGIC ---------- -->
-<script>
-  const links = document.querySelectorAll("nav a");
-  const sections = Array.from(links).map(link =>
-    document.querySelector(link.getAttribute("href"))
-  );
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-      if (section.getBoundingClientRect().top <= 90) {
-        current = section.id;
-      }
-    });
-
-    links.forEach(link => {
-      link.classList.toggle(
-        "active",
-        link.getAttribute("href") === "#" + current
-      );
-    });
-  });
-</script>
-
 </body>
 </html>
+``
