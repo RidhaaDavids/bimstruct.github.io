@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -21,6 +25,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      background: #000;
+      z-index: 10;
     }
 
     header strong {
@@ -34,10 +42,10 @@
       font-size: 14px;
     }
 
-    /* ---------- HERO IMAGE ---------- */
+    /* ---------- HERO IMAGE (DEPTH +20mm ≈ +76px) ---------- */
     .image-strip {
       width: 100%;
-      height: 110px;
+      height: 186px; /* increased from 110px */
       overflow: hidden;
     }
 
@@ -152,24 +160,26 @@
 <header>
   <strong>BIMstruct | structures.done right.</strong>
   <nav>
-    Home |
-    About |
-    Services |
-    How it works |
-    Contact
+    <a href="#home">Home</a> |
+    <a href="#about">About</a> |
+    <a href="#services">Services</a> |
+    <a href="#process">How it works</a> |
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- HERO IMAGE -->
-<div class="image-strip">
-  <img src="hero-construction.jpg" alt="Structural construction">
-</div>
+<!-- HOME -->
+<section id="home">
+  <div class="image-strip">
+    <img src="hero-construction.jpg" alt="">
+  </div>
+</section>
 
 <div class="divider"></div>
 
 <!-- ABOUT -->
-<section class="container about">
-  <img src="about.jpg" alt="Structural model">
+<section id="about" class="container about">
+  <img src="about.jpg" alt="">
 
   <h2>About</h2>
   <p>
@@ -181,15 +191,15 @@
 <div class="divider"></div>
 
 <!-- SERVICES -->
-<section class="container services">
+<section id="services" class="container services">
   <h2>Professional BIM Services</h2>
 
   <div class="service-block">
     <h3>Structural Modelling & BIM Management</h3>
     <ul>
       <li>Structural Revit modelling (reinforced concrete & steel)</li>
-      <li>Structural layouts and construction‑ready models</li>
-      <li>Model audits, clean‑ups, and optimisation</li>
+      <li>Structural layouts and construction-ready models</li>
+      <li>Model audits, clean-ups, and optimisation</li>
       <li>Model management and BIM execution support</li>
     </ul>
   </div>
@@ -199,8 +209,8 @@
     <ul>
       <li>Rebar modelling, detailing, and scheduling</li>
       <li>Clear, constructible reinforcement layouts</li>
-      <li>Site‑friendly detailing aligned with industry standards</li>
-      <li>Coordination‑ready reinforcement models</li>
+      <li>Site-friendly detailing aligned with industry standards</li>
+      <li>Coordination-ready reinforcement models</li>
     </ul>
   </div>
 
@@ -217,9 +227,9 @@
   <div class="service-block">
     <h3>3D Visualisation & Renders</h3>
     <ul>
-      <li>High‑quality 3D structural renders</li>
+      <li>High-quality 3D structural renders</li>
       <li>Construction sequencing and phasing visuals</li>
-      <li>Presentation‑ready models for review and approvals</li>
+      <li>Presentation-ready models for review and approvals</li>
     </ul>
   </div>
 
@@ -238,7 +248,7 @@
     <ul>
       <li>PDF to Revit conversion</li>
       <li>2D CAD to Revit conversion</li>
-      <li>As‑built and record model creation</li>
+      <li>As-built and record model creation</li>
       <li>Legacy drawing upgrades to intelligent BIM models</li>
     </ul>
   </div>
@@ -247,12 +257,12 @@
 <div class="divider"></div>
 
 <!-- HOW IT WORKS -->
-<section class="process">
+<section id="process" class="process">
   <h2>How BIMstruct Works</h2>
 
   <div class="step">
     <strong>1. Upload your request</strong>
-    Submit drawings, PDFs, CAD files, Revit models, sketches, or a brief description of what you need.
+    Submit drawings, PDFs, CAD files, Revit models, sketches, or a brief description.
   </div>
 
   <div class="step">
@@ -262,12 +272,12 @@
 
   <div class="step">
     <strong>3. Clear feedback & quote</strong>
-    You’ll be informed whether the work is possible, along with a transparent and competitive quote.
+    Transparent confirmation and competitive quote.
   </div>
 
   <div class="step">
     <strong>4. Delivery</strong>
-    Quality structural BIM work, aligned with your requirements, standards, and timelines.
+    Quality BIM work aligned with standards and timelines.
   </div>
 
   <div class="note">
@@ -278,7 +288,7 @@
 <div class="divider"></div>
 
 <!-- CONTACT -->
-<section class="container" style="text-align:center;">
+<section id="contact" class="container" style="text-align:center;">
   <h2>Get in Touch</h2>
   <p>BIMstruct@gmail.com</p>
 </section>
