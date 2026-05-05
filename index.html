@@ -9,14 +9,14 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #000;
-      background: #fff;
+      background: #000;
+      color: #fff;
       line-height: 1.5;
     }
 
     /* ---------- HEADER ---------- */
     header {
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #333;
       padding: 14px 24px;
       display: flex;
       justify-content: space-between;
@@ -30,11 +30,11 @@
     nav a {
       margin-left: 16px;
       text-decoration: none;
-      color: #000;
+      color: #fff;
       font-size: 14px;
     }
 
-    /* ---------- IMAGE STRIPS ---------- */
+    /* ---------- HERO IMAGE ---------- */
     .image-strip {
       width: 100%;
       height: 110px;
@@ -45,13 +45,16 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: grayscale(85%);
+      filter: grayscale(90%) brightness(0.8);
       display: block;
     }
 
-    .image-strip.services {
-      height: 150px;
-      margin-bottom: 32px;
+    /* ---------- DIVIDER ---------- */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      opacity: 0.25;
     }
 
     /* ---------- SECTIONS ---------- */
@@ -59,36 +62,41 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 36px 24px;
-      text-align: center;
     }
 
     h2 {
-      margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 26px;
     }
 
     /* ---------- ABOUT ---------- */
+    .about {
+      text-align: center;
+    }
+
     .about img {
       width: 180px;
       height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
+      filter: grayscale(100%);
     }
 
     /* ---------- SERVICES ---------- */
     .services {
-      background: #000;
-      color: #fff;
+      text-align: center;
     }
 
     .service-block {
       max-width: 720px;
-      margin: 0 auto 36px;
+      margin: 0 auto 32px;
     }
 
     .service-block h3 {
       font-size: 18px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .service-block ul {
@@ -99,16 +107,42 @@
 
     .service-block li {
       font-size: 14px;
-      color: #dddddd;
+      color: #cccccc;
       margin-bottom: 6px;
+    }
+
+    /* ---------- PROCESS ---------- */
+    .process {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 36px 24px;
+    }
+
+    .process h2 {
+      margin-bottom: 22px;
+    }
+
+    .step {
+      margin-bottom: 22px;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .note {
+      margin-top: 24px;
+      font-weight: bold;
     }
 
     /* ---------- FOOTER ---------- */
     footer {
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #333;
       padding: 28px;
       text-align: center;
       font-size: 14px;
+      color: #bbbbbb;
     }
   </style>
 </head>
@@ -118,9 +152,10 @@
 <header>
   <strong>BIMstruct | structures.done right.</strong>
   <nav>
-    Home
-    About
-    Services
+    Home |
+    About |
+    Services |
+    How it works |
     Contact
   </nav>
 </header>
@@ -130,9 +165,11 @@
   <img src="hero-construction.jpg" alt="Structural construction">
 </div>
 
+<div class="divider"></div>
+
 <!-- ABOUT -->
 <section class="container about">
-  <img src="about.jpg" alt="Structural blueprint">
+  <img src="about.jpg" alt="Structural model">
 
   <h2>About</h2>
   <p>
@@ -141,20 +178,18 @@
   </p>
 </section>
 
+<div class="divider"></div>
+
 <!-- SERVICES -->
 <section class="container services">
   <h2>Professional BIM Services</h2>
-
-  <div class="image-strip services">
-    <img src="services-construction.jpg" alt="Construction site">
-  </div>
 
   <div class="service-block">
     <h3>Structural Modelling & BIM Management</h3>
     <ul>
       <li>Structural Revit modelling (reinforced concrete & steel)</li>
-      <li>Structural layouts and construction-ready models</li>
-      <li>Model audits, clean-ups, and optimisation</li>
+      <li>Structural layouts and construction‑ready models</li>
+      <li>Model audits, clean‑ups, and optimisation</li>
       <li>Model management and BIM execution support</li>
     </ul>
   </div>
@@ -164,8 +199,8 @@
     <ul>
       <li>Rebar modelling, detailing, and scheduling</li>
       <li>Clear, constructible reinforcement layouts</li>
-      <li>Site-friendly detailing aligned with industry standards</li>
-      <li>Coordination-ready reinforcement models</li>
+      <li>Site‑friendly detailing aligned with industry standards</li>
+      <li>Coordination‑ready reinforcement models</li>
     </ul>
   </div>
 
@@ -182,9 +217,9 @@
   <div class="service-block">
     <h3>3D Visualisation & Renders</h3>
     <ul>
-      <li>High-quality 3D structural renders</li>
+      <li>High‑quality 3D structural renders</li>
       <li>Construction sequencing and phasing visuals</li>
-      <li>Presentation-ready models for review and approvals</li>
+      <li>Presentation‑ready models for review and approvals</li>
     </ul>
   </div>
 
@@ -203,14 +238,47 @@
     <ul>
       <li>PDF to Revit conversion</li>
       <li>2D CAD to Revit conversion</li>
-      <li>As-built and record model creation</li>
+      <li>As‑built and record model creation</li>
       <li>Legacy drawing upgrades to intelligent BIM models</li>
     </ul>
   </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- HOW IT WORKS -->
+<section class="process">
+  <h2>How BIMstruct Works</h2>
+
+  <div class="step">
+    <strong>1. Upload your request</strong>
+    Submit drawings, PDFs, CAD files, Revit models, sketches, or a brief description of what you need.
+  </div>
+
+  <div class="step">
+    <strong>2. Scope review</strong>
+    We assess feasibility, technical requirements, and level of effort.
+  </div>
+
+  <div class="step">
+    <strong>3. Clear feedback & quote</strong>
+    You’ll be informed whether the work is possible, along with a transparent and competitive quote.
+  </div>
+
+  <div class="step">
+    <strong>4. Delivery</strong>
+    Quality structural BIM work, aligned with your requirements, standards, and timelines.
+  </div>
+
+  <div class="note">
+    No obligation – just honest, professional BIM support.
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- CONTACT -->
-<section class="container">
+<section class="container" style="text-align:center;">
   <h2>Get in Touch</h2>
   <p>BIMstruct@gmail.com</p>
 </section>
@@ -221,4 +289,3 @@
 
 </body>
 </html>
-``
