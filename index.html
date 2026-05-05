@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
 
+  <!-- SEO (STEP 6) -->
   <title>BIMstruct | Structural BIM Services</title>
-
   <meta name="description"
         content="BIMstruct provides professional structural BIM services including Revit modelling, reinforcement detailing, BIM coordination, automation and digitalisation." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
 
   <style>
     html {
@@ -39,6 +38,7 @@
 
     header strong {
       font-size: 16px;
+      white-space: nowrap;
     }
 
     nav {
@@ -50,8 +50,8 @@
     nav a {
       color: #aaa;
       text-decoration: none;
-      padding-bottom: 2px;
       border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
     }
 
     nav a:hover,
@@ -63,7 +63,7 @@
     /* ---------- HERO ---------- */
     .image-strip {
       width: 100%;
-      height: 186px;
+      height: 186px; /* increased depth */
       overflow: hidden;
     }
 
@@ -84,7 +84,7 @@
 
     /* ---------- SECTIONS ---------- */
     section {
-      scroll-margin-top: 78px;
+      scroll-margin-top: 80px;
     }
 
     .container {
@@ -95,8 +95,8 @@
 
     h2 {
       text-align: center;
-      margin-bottom: 24px;
       font-size: 26px;
+      margin-bottom: 24px;
     }
 
     /* ---------- ABOUT ---------- */
@@ -130,8 +130,8 @@
 
     .service-block ul {
       list-style: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
 
     .service-block li {
@@ -140,7 +140,7 @@
       margin-bottom: 6px;
     }
 
-    /* ---------- HOW IT WORKS (SHIFTED LEFT) ---------- */
+    /* ---------- HOW IT WORKS ---------- */
     .process {
       max-width: 900px;
       margin: 0 auto;
@@ -152,9 +152,10 @@
       margin-bottom: 32px;
     }
 
+    /* shifted left to align with your red line */
     .process-grid {
       max-width: 520px;
-      margin-left: 180px; /* <<< THIS MOVES TEXT TO YOUR RED LINE */
+      margin-left: 180px;
     }
 
     .step {
@@ -187,88 +188,166 @@
 <header>
   <strong>BIMstruct | structures.done right.</strong>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#process">How it works</a>
-    <a href="#contact">Contact</a>
+    #homeHome</a>
+    #aboutAbout</a>
+    #servicesServices</a>
+    #processHow it works</a>
+    #contactContact</a>
   </nav>
 </header>
 
+<!-- HOME -->
 <section id="home">
   <div class="image-strip">
-    <img src="hero-construction.jpg" alt="">
+    hero-construction.jpg
   </div>
 </section>
 
 <div class="divider"></div>
 
+<!-- ABOUT -->
 <section id="about" class="container about">
-  <img src="about.jpg" alt="">
+  about.jpg
   <h2>About</h2>
   <p>
     BIMstruct is a remote-based structural BIM services company delivering
-    high‑quality, practical, and affordable solutions — from Cape Town to the world.
+    high-quality, practical and affordable BIM solutions — from Cape Town to the world.
+  </p>
+  <p>
+    We support engineers, contractors, developers, architects and students with
+    reliable, construction‑focused structural BIM services.
   </p>
 </section>
 
 <div class="divider"></div>
 
+<!-- SERVICES -->
 <section id="services" class="container services">
   <h2>Professional BIM Services</h2>
 
   <div class="service-block">
     <h3>Structural Modelling & BIM Management</h3>
     <ul>
-      <li>Structural Revit modelling (RC & steel)</li>
-      <li>Construction-ready models</li>
-      <li>Model audits and optimisation</li>
+      <li>Structural Revit modelling (reinforced concrete & steel)</li>
+      <li>Construction‑ready structural BIM models</li>
+      <li>Model audits, clean‑ups and optimisation</li>
+      <li>BIM execution and model management support</li>
+    </ul>
+  </div>
+
+  <div class="service-block">
+    <h3>Reinforcement Detailing</h3>
+    <ul>
+      <li>Rebar modelling, detailing and scheduling</li>
+      <li>Clear, constructible reinforcement layouts</li>
+      <li>Coordination‑ready reinforcement models</li>
+    </ul>
+  </div>
+
+  <div class="service-block">
+    <h3>BIM Coordination & Clash Detection</h3>
+    <ul>
+      <li>Multidisciplinary coordination</li>
+      <li>Clash detection and issue tracking</li>
+      <li>Construction‑stage coordination support</li>
+    </ul>
+  </div>
+
+  <div class="service-block">
+    <h3>3D Visualisation & Renders</h3>
+    <ul>
+      <li>High‑quality structural visualisation</li>
+      <li>Sequencing and phasing renders</li>
+      <li>Presentation‑ready illustrations</li>
+    </ul>
+  </div>
+
+  <div class="service-block">
+    <h3>Automation & Dynamo</h3>
+    <ul>
+      <li>Custom Dynamo script development</li>
+      <li>Revit workflow automation</li>
+      <li>Efficiency tools for BIM teams</li>
+    </ul>
+  </div>
+
+  <div class="service-block">
+    <h3>Conversions & Digitalisation</h3>
+    <ul>
+      <li>PDF & CAD to Revit conversion</li>
+      <li>As‑built and record model creation</li>
+      <li>Legacy drawings upgraded to BIM</li>
     </ul>
   </div>
 </section>
 
 <div class="divider"></div>
 
+<!-- HOW IT WORKS -->
 <section id="process" class="process">
   <h2>How BIMstruct Works</h2>
 
   <div class="process-grid">
     <div class="step">
       <strong>1. Upload your request</strong>
-      Drawings, PDFs, CAD, Revit models or brief description.
+      Drawings, PDFs, CAD files, Revit models or a brief description.
     </div>
 
     <div class="step">
       <strong>2. Scope review</strong>
-      Feasibility, technical requirements & effort.
+      Feasibility, technical requirements and effort assessment.
     </div>
 
     <div class="step">
       <strong>3. Clear feedback & quote</strong>
-      Transparent confirmation & pricing.
+      Transparent confirmation and competitive pricing.
     </div>
 
     <div class="step">
       <strong>4. Delivery</strong>
-      Quality structural BIM work.
+      Quality structural BIM work aligned to your standards and timeline.
     </div>
 
     <div class="note">
-      No obligation – just honest, professional BIM support.
+      No obligation — just honest, professional BIM support.
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
+<!-- CONTACT -->
 <section id="contact" class="container" style="text-align:center;">
   <h2>Get in Touch</h2>
-  <p>BIMstruct@gmail.com</p>
+  <p>bimstruct@gmail.com</p>
 </section>
 
 <footer>
   BIMstruct © 2026 · structures.done right.
 </footer>
+
+<script>
+  const links = document.querySelectorAll("nav a");
+  const sections = Array.from(links).map(link =>
+    document.querySelector(link.getAttribute("href"))
+  );
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top <= 90) {
+        current = section.id;
+      }
+    });
+
+    links.forEach(link => {
+      link.classList.toggle(
+        "active",
+        link.getAttribute("href") === "#" + current
+      );
+    });
+  });
+</script>
 
 </body>
 </html>
